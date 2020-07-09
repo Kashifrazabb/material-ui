@@ -1,17 +1,14 @@
 import React from 'react';
 import { Grid, Select, MenuItem} from '@material-ui/core';
-import { UseStyles } from './UseStyles';
-
 
 const Input = ({ countries, CountryCode, selectValue, handleSelect }) => {
-    const classes = UseStyles();
     return (
             <Grid container direction='column'>
 
                 <Grid container item>
                     <Grid item xs={1} md={3} />
                     <Grid item xs={10} md={6}>
-                        <Select onChange={handleSelect} value={selectValue} fullWidth className={classes.root}>
+                        <Select onChange={handleSelect} value={selectValue} fullWidth>
                             <MenuItem value="Global">Global</MenuItem>
                             {countries.map(country => <MenuItem value={country}>{country}</MenuItem>)}
                         </Select>

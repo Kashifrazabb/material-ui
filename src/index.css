@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
+:root{
+    --color-1:rgb(180, 180, 42);
+    --color-2:rgb(27, 188, 251);
+    --color-3:red;
+}
+
 *{padding:0;margin:0;box-sizing: border-box;}
 
 body{height:100vh;background: rgb(221, 219, 219);}
@@ -10,17 +16,20 @@ font-family: 'Abel', sans-serif;color:#000}
 
 @keyframes spin{100% {transform: rotate(360deg)}}
 
-.result-card-color-red{border:1px solid red;border-bottom: 10px solid red;}
-.result-card-color-blue{border:1px solid blue;border-bottom: 10px solid blue;}
-.result-card-color-green{border:1px solid green;border-bottom: 10px solid green;}
+.result-card-color-1{border:1px solid var(--color-1);border-bottom: 10px solid var(--color-1);}
+.result-card-color-2{border:1px solid var(--color-2);border-bottom: 10px solid var(--color-2);}
+.result-card-color-3{border:1px solid var(--color-3);border-bottom: 10px solid var(--color-3);}
 
-.result-card-color-red>h1{color:red}
-.result-card-color-blue>h1{color:blue}
-.result-card-color-green>h1{color:green}
+.result-card-color-1>h1{color:var(--color-1)}
+.result-card-color-2>h1{color:var(--color-2)}
+.result-card-color-3>h1{color:var(--color-3)}
 
-.result-card-color-red ::selection{background: red;color:white}
-.result-card-color-blue ::selection{background: blue;color:white}
-.result-card-color-green ::selection{background: green;color:white}
+.result-card-color-1 ::selection{background: var(--color-1);color:white}
+.result-card-color-2 ::selection{background: var(--color-2);color:white}
+.result-card-color-3 ::selection{background: var(--color-3);color:white}
+
+#card-img {width:40px;height:40px;}
+#card-img-wrapper{display: flex;justify-content: space-between;align-items: center;}
 
 @media (max-width:400px){
     #header{
