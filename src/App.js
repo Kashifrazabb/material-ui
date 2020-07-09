@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import Header from './components/Header';
-import Result from './components/Result';
+import Output from './components/Output';
 import Input from './components/Input';
 import axios from 'axios';
 
@@ -49,7 +49,7 @@ const App = () => {
         <Header/>
         <Input countries={countries?countries:['Loading....']} handleSelect={handleSelect} 
         selectValue={selectValue} CountryCode={CountryCode}/>
-        <Result TotalConfirmed={TotalConfirmed} TotalRecovered={TotalRecovered}
+        <Output TotalConfirmed={TotalConfirmed} TotalRecovered={TotalRecovered}
         TotalDeaths={TotalDeaths} date={date}/>
     </>
   );
